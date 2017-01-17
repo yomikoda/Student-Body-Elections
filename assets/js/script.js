@@ -5,17 +5,21 @@ $(function(){
             
             var _firstname = $('#firstname').val(),
                 _lastname = $('#lastname').val(),
-                _age = $('#age').val();
+                _age = $('#age').val(),
+                _mail = $("#mail").val();
             
             $.post('api/voter', {
                 firstname: _firstname,
                 lastname: _lastname,
-                age: _age
+                age: _age,
+                mail: _mail
             }).done(function(data){
                 alert("data loaded: " + data );
+                $("body").append('<input type="hidden" id="userId" value="'+data.id+'">');
             });
+             
+    
             
-           
             
             $('#vote').toggleClass('hidden');
         });

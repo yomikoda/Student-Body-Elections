@@ -42,21 +42,39 @@ app.post('/api/voter', function(req,res){
     var _body = req.body;
     
     console.log(_body);    
-     //var _id= "SELECT id FROM voter WHERE firstname='"+_body._firstname+"' and lastname='"+_body._lastname+"';"
-    //console.log(_id);
+    
     var _c = connection(),
-        _q = "INSERT INTO voter (firstname,lastname,age) VALUES ('"+_body.firstname+"', '"+_body.lastname+"',"+_body.age+");"
+        _q = "INSERT INTO voter (firstname,lastname,age,mail) VALUES ('"+_body.firstname+"', '"+_body.lastname+"','"+_body.age+"','"+_body.mail+"');"
     console.log(_q);
     _c.connect();
 	_c.query(_q, function(err, rows, fields) {
       if (err) res.status(500).send(err);
-        console.log(rows);
+        
+        
 	  res.status(201).send({status:'success', id: rows.insertId, });
         //res.json([statusCode, ] data);
         
         
 	});
 	_c.end();
+});
+
+app.get('/api/voterid', function(req, res){
+
+	var _body = req.body,
+        _c = connection(),
+	   _id= "SELECT id FROM voter WHERE mail='"+_body.mail+"';"
+    console.log(_id);	
+	
+     
+    console.log("lol");
+	_c.connect();
+	_c.query(_id, function(err, rows, fields) {
+	  if (err) throw err;
+	  res.send(rows);
+	});
+	_c.end();
+
 });
 
 
@@ -100,8 +118,7 @@ app.post('/api/vote', function(req,res){
     var _body = req.body;
     
     console.log(_body);    
-     //var _id= "SELECT id FROM voter WHERE firstname='"+_body._firstname+"' and lastname='"+_body._lastname+"';"
-    //console.log(_id);
+     
     var _c = connection(),
         _q = "INSERT INTO votes (voter,candidate) VALUES ('"+_body.voter+"', '"+_body.candidate+"');"
     console.log(_q);

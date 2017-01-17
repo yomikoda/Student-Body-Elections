@@ -170,7 +170,7 @@ body {
       text-align: center;
       letter-spacing: 5px;
       margin-top: 5px; }
-    body main input[type=text] {
+    body main input[type=text], body main input[type=email] {
       display: block;
       margin: 30px auto 30px;
       height: 30px;
