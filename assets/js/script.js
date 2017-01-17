@@ -17,11 +17,8 @@ $(function(){
                 alert("data loaded: " + data );
                 $("body").append('<input type="hidden" id="userId" value="'+data.id+'">');
             });
-             
-    
             
-            
-            $('#vote').toggleClass('hidden');
+             $('#vote').toggleClass('hidden');
         });
         
        

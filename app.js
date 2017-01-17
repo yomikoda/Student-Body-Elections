@@ -59,23 +59,6 @@ app.post('/api/voter', function(req,res){
 	_c.end();
 });
 
-app.get('/api/voterid', function(req, res){
-
-	var _body = req.body,
-        _c = connection(),
-	   _id= "SELECT id FROM voter WHERE mail='"+_body.mail+"';"
-    console.log(_id);	
-	
-     
-    console.log("lol");
-	_c.connect();
-	_c.query(_id, function(err, rows, fields) {
-	  if (err) throw err;
-	  res.send(rows);
-	});
-	_c.end();
-
-});
 
 
 // ADMIN PAGE - INSERT CANDIDATE INTO DB CANDIDATES
