@@ -1,0 +1,175 @@
+@import 'reset';
+body {
+    width: 100%;
+    height: 800px;
+    background-color: deepskyblue;
+    header {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        background-color: red;
+        background-image: url(../img/Beacon-hills.JPG);
+        background-size: cover;
+        background-position: center;
+        #adminbutton {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            background-image: url(../img/settings-icon.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all ease 1s;
+            a {
+                display: block;
+                width: 50px;
+                height: 50px;
+            }
+        }
+        #adminbutton:hover {
+            background-image: url(../img/settings-icon-blue.png);
+            transition: all ease 1s;
+        }
+    }
+    main {
+        width: 800px;
+        margin: 0 auto;
+        position: relative;
+        //ADMIN PAGE + Basics
+        h1 {
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 50px;
+            margin-top: 100px;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 1px darkblue;
+            margin-bottom: 100px;
+        }
+        h2 {
+            font-family: arial;
+            text-align: center;
+            letter-spacing: 5px;
+            margin-top: 5px;
+        }
+        input[type=text] {
+            display: block;
+            margin: 30px auto 30px;
+            height: 30px;
+            width: 300px;
+        }
+        input[type=submit] {
+            display: block;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: dodgerblue;
+            height: 30px;
+            width: 300px;
+            margin: 0 auto;
+            color: white;
+            transition: all ease 1s;
+        }
+        input[type=submit]:hover {
+            background-color: darkblue;
+            transition: all ease 1s;
+            border: 1px solid white;
+        }
+        //HOME
+        #register,
+        #vote,
+        #voted {
+            width: 100%;
+            height: 600px;
+            box-sizing: border-box;
+            border: 1px solid white;
+        }
+        .hidden{
+            display:none;
+        }
+        #vote {
+            height: 600px;
+            h1 {
+                margin-bottom: 50px;
+                margin-top: 50px;
+            }
+            form {
+               
+                height: 100%;
+                width: 100%;
+                position: relative;
+                .candidate {
+                    background-color: darkblue;
+                    width: 20%;
+                    height: 280px;
+                    float: left;
+                    margin-right: 40px;
+                    position: relative;
+                    margin-bottom: 50px;
+                    padding-top: 20px;
+                }
+                .candidate:first-child {
+                    margin-left: 20px;
+                }
+                .candidate:nth-child(4) {
+                    margin-right: 0;
+                }
+                input[type=radio] {
+                    position: absolute;
+                    bottom: 8px;
+                    left: 44%;
+                    background-color: red;
+                }
+                input[type=submit] {
+                    display: block;
+                }
+                #candidatedata {
+                    height: 250px;
+                    width: 100%;
+                    img {
+                        display: block;
+                        width: 80%;
+                        height: 80%;
+                        margin: 0 auto;
+                        border: 1px solide white;
+                        box-sizing: border-box;
+                    }
+                    h3 {
+                        margin: 0 auto;
+                        margin-top: 10px;
+                        width: 100px;
+                        height: 40px;
+                        font-family: Arial black;
+                        text-align: center;
+                        color: white;
+                    }
+                }
+            }
+            clear:both;
+            margin-bottom: 100px;
+        }
+        #register{
+            
+            margin-bottom: 100px;
+        }
+        #voted {
+            height: 400px;
+            width: 100%;
+            margin-bottom: 100px;
+            h2 {
+                color: white;
+                font-family: arial;
+                font-size: 20px;
+                margin-top: 100px;
+                text-shadow: 1px 1px 1px darkblue;
+            }
+            p {
+                width: 400px;
+                margin: 0 auto;
+                margin-top: 50px;
+                text-align: center;
+                color: white;
+                font-family: arial;
+            }
+        }
+    }
+}

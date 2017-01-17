@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Body Elections</title>
+    <meta name="description" content="Student Body Elections">
+    <link rel="icon" type="image/png" href="../img/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="adminbutton">
+            <a href="/admin"></a>
+        </div>
+    </header>
+    <main>
+
+        <h1>Student Body President Elections</h1>
+        <div id="register">
+            <h1>REGISTER TO VOTE</h1>
+            <form id="voterregister">
+                <input type="text" id="firstname" name="firstname" placeholder="First name">
+                <input type="text" id="lastname" name="lastname" placeholder="Last name">
+                <input type="text" id="age" name="age" placeholder="Change to DOB ?">
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <div id="vote" class="">
+            <h1>VOTE !</h1>
+            <!--div.candidate*4>div#candidatepic+p-->
+            <form id="votecasting">
+               <div id="candidatelist">
+                
+                </div>
+                <input type="submit" value="Cast Your Vote" id="castyovote">
+            </form>
+        </div>
+        <div id="voted" class="">
+           <input type="hidden" name="Language" value="">
+            <h2>Your Vote has been taken into account.</h2>
+            <p>Thanks for participating in the democratic process and doing the bare minimum to fulfill your civic duty.</p>
+        </div>
+
+
+    </main>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

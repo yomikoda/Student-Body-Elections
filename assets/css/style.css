@@ -1,0 +1,269 @@
+/**RESET CSS **/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  width: 100%;
+  height: 800px;
+  background-color: deepskyblue; }
+  body header {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    background-color: red;
+    background-image: url(../img/Beacon-hills.JPG);
+    background-size: cover;
+    background-position: center; }
+    body header #adminbutton {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      right: 50px;
+      top: 50px;
+      background-image: url(../img/settings-icon.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all ease 1s; }
+      body header #adminbutton a {
+        display: block;
+        width: 50px;
+        height: 50px; }
+    body header #adminbutton:hover {
+      background-image: url(../img/settings-icon-blue.png);
+      transition: all ease 1s; }
+  body main {
+    width: 800px;
+    margin: 0 auto;
+    position: relative; }
+    body main h1 {
+      font-family: Arial;
+      font-weight: bold;
+      font-size: 50px;
+      margin-top: 100px;
+      text-align: center;
+      color: white;
+      text-shadow: 1px 1px 1px darkblue;
+      margin-bottom: 100px; }
+    body main h2 {
+      font-family: arial;
+      text-align: center;
+      letter-spacing: 5px;
+      margin-top: 5px; }
+    body main input[type=text] {
+      display: block;
+      margin: 30px auto 30px;
+      height: 30px;
+      width: 300px; }
+    body main input[type=submit] {
+      display: block;
+      border: 1px solid transparent;
+      background-color: dodgerblue;
+      height: 30px;
+      width: 300px;
+      margin: 0 auto;
+      color: white;
+      transition: all ease 1s; }
+    body main input[type=submit]:hover {
+      background-color: darkblue;
+      transition: all ease 1s;
+      border: 1px solid white; }
+    body main #register,
+    body main #vote,
+    body main #voted {
+      width: 100%;
+      height: 600px;
+      box-sizing: border-box;
+      border: 1px solid white; }
+    body main .hidden {
+      display: none; }
+    body main #vote {
+      height: 600px;
+      clear: both;
+      margin-bottom: 100px; }
+      body main #vote h1 {
+        margin-bottom: 50px;
+        margin-top: 50px; }
+      body main #vote form {
+        height: 100%;
+        width: 100%;
+        position: relative; }
+        body main #vote form .candidate {
+          background-color: darkblue;
+          width: 20%;
+          height: 280px;
+          float: left;
+          margin-right: 40px;
+          position: relative;
+          margin-bottom: 50px;
+          padding-top: 20px; }
+        body main #vote form .candidate:first-child {
+          margin-left: 20px; }
+        body main #vote form .candidate:nth-child(4) {
+          margin-right: 0; }
+        body main #vote form input[type=radio] {
+          position: absolute;
+          bottom: 8px;
+          left: 44%;
+          background-color: red; }
+        body main #vote form input[type=submit] {
+          display: block; }
+        body main #vote form #candidatedata {
+          height: 250px;
+          width: 100%; }
+          body main #vote form #candidatedata img {
+            display: block;
+            width: 80%;
+            height: 80%;
+            margin: 0 auto;
+            border: 1px solide white;
+            box-sizing: border-box; }
+          body main #vote form #candidatedata h3 {
+            margin: 0 auto;
+            margin-top: 10px;
+            width: 100px;
+            height: 40px;
+            font-family: Arial black;
+            text-align: center;
+            color: white; }
+    body main #register {
+      margin-bottom: 100px; }
+    body main #voted {
+      height: 400px;
+      width: 100%;
+      margin-bottom: 100px; }
+      body main #voted h2 {
+        color: white;
+        font-family: arial;
+        font-size: 20px;
+        margin-top: 100px;
+        text-shadow: 1px 1px 1px darkblue; }
+      body main #voted p {
+        width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        text-align: center;
+        color: white;
+        font-family: arial; }
+
+/*# sourceMappingURL=style.css.map */
