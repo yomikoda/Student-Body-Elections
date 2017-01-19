@@ -44,7 +44,7 @@ $(function(){
         $.get('api/candidate', function(data){
                 $('#candidatelist').empty();
                 for(var i=0; i<data.length; i++){
-                    var _candidate= "<div class='candidate'><div id='candidatedata'><img src='../img/"+ data[i].firstname +".JPG' id='candidateimg'></img><h3 id='candidatename'>"+ data[i].firstname +" "+ data[i].lastname +"</h3></div> <label for='"+ data[i].firstname +"'></label><input type='radio' name='candidate' id='"+ data[i].firstname +"' value='"+ data[i].firstname +"'></div>";
+                    var _candidate= "<div class='candidate'><div id='candidatedata'><img src='../img/"+ data[i].firstname +".JPG' id='candidateimg'></img><h3 id='candidatename'>"+ data[i].firstname +" "+ data[i].lastname +"</h3></div> <label for='"+ data[i].firstname +"'></label><input type='radio' name='candidate' id='"+ data[i].firstname +"' value='"+ data[i].firstname +"'><input type='hidden' id='candidateid' value='"+data[i].id +"'> </div>";
                     $("#candidatelist").append(_candidate);
                     console.log(_candidate);
                 }   
@@ -52,19 +52,26 @@ $(function(){
     
     
         console.log('gneu?');
-    
-  
+   
+            
        
     
     // VOTING
-        $('#castyovote').submit(function(e) {
+        $('#votecasting').submit(function(e) {
             e.preventDefault(); 
             
-        
-            
-        
+         
+           
+            console.log('hi');
+            $('#voted').toggleClass('hidden');
             
         });
+    
+    
+    
+            
+            
+  
     
     
  //BASICALLY THE ID OF THE REGISTERED ADDED TO DB WITH THE ID OF CANDIDATE

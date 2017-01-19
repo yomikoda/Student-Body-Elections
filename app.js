@@ -96,14 +96,12 @@ app.get('/api/candidate', function(req, res){
 
 // REGISTER THE VOTE
 
-app.post('/api/vote', function(req,res){
-    
-    var _body = req.body;
-    
-    console.log(_body);    
+app.post('/api/vote', function(req,res){  
      
-    var _c = connection(),
-        _q = "INSERT INTO votes (voter,candidate) VALUES ('"+_body.voter+"', '"+_body.candidate+"');"
+    var voterid = $('#userId').val(),  // HOW TO GET THE VOTER ID BACK
+        candidateid = $('input[name=radioName]:checked').val(), // HOW TO GET THE CANDIDATE ID BACK
+        _c = connection(),
+        _q = "INSERT INTO votes (voter,candidate) VALUES ('"+ voterid +"', '"+ candidateid+"');";
     console.log(_q);
     _c.connect();
 	_c.query(_q, function(err, rows, fields) {
@@ -111,8 +109,7 @@ app.post('/api/vote', function(req,res){
         console.log(rows);
 	  res.status(201).send({status:'success', id: rows.insertId, });
         //res.json([statusCode, ] data);
-        
-        
+            
 	});
 	_c.end();
 
@@ -120,7 +117,16 @@ app.post('/api/vote', function(req,res){
 
 
 
-//
+
+// FIRST GET THE IDS FROM THE VOTERS 
+// GET THE IDS FOR CANDIDATES
+// LINK THE TWO
+
+
+
+
+
+
 
 http.listen(3000, function(){
   console.log('listening on *:3000');
